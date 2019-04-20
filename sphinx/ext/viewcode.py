@@ -201,7 +201,7 @@ def collect_pages(app):
             type, start, end = tags[name]
             backlink = urito(pagename, docname) + '#' + refname + '.' + name
             lines[start] = (
-                '<a class="viewcode-block viewcode-back"' +
+                '<a class="viewcode-block viewcode-back" ' +
                 'id="%s" href="%s">%s</a>' % (name, backlink, _('[docs]')) +
                 lines[start])
 
