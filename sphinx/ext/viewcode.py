@@ -21,7 +21,7 @@ from sphinx.util.nodes import make_refnode
 
 if False:
     # For type annotation
-    from typing import Any, Dict, Iterable, Iterator, Set, Tuple  # NOQA
+    from typing import Any, Dict, Iterable, Iterator, Set, Tuple, List # NOQA
     from sphinx.application import Sphinx  # NOQA
     from sphinx.config import Config  # NOQA
     from sphinx.environment import BuildEnvironment  # NOQA
@@ -142,6 +142,7 @@ def missing_reference(app, env, node, contnode):
 
 
 def split_code_lines(lines):
+    # type: (List[str]) -> Tuple[List[str], List[str], List[str]]
     end_header_string = 'td class="code">'
     header = []
     for i, line in enumerate(lines):
